@@ -48,7 +48,7 @@ function Home() {
                         show: { y: 0, opacity: 1 }
                     }}
                 >
-                    Hej, jag är Musa
+                    Hej, jag är Musa Vakilov
                 </motion.h1>
 
                 <motion.p

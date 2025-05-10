@@ -1,16 +1,16 @@
 // src/components/Projects.jsx
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import webshopImg from "../assets/webshop.jpg";
+import mealappImg from "../assets/mealapp.jpg";
 import chatifyImg from "../assets/chatify.jpg";
 import portfolioImg from "../assets/portfolio.jpg";
 
 const projects = [
     {
-        title: "Webshop",
-        description: "En modern e-handelsplattform.",
-        link: "/projects/webshop",
-        img: webshopImg,
+        title: "MealApp",
+        description: "MealApp.",
+        link: "https://mealappreact1.netlify.app/",
+        img: mealappImg,
     },
     {
         title: "Chatify App",
