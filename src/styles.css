@@ -1,0 +1,237 @@
+/* ========== GLOBALT ========== */
+body {
+    background: linear-gradient(135deg, #1f1f1f, #2d2d2d);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ========== RUBRIKER ========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+h1::after,
+h2::after,
+h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #9333ea;
+    transition: width 0.3s ease;
+}
+
+h1:hover::after,
+h2:hover::after,
+h3:hover::after {
+    width: 100%;
+}
+
+/* ========== KNAPPAR ========== */
+.btn-custom {
+    background-color: #6610f2;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(102, 16, 242, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #5a0dcf;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 16, 242, 0.5);
+}
+
+.btn-custom:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* ========== KORT & SECTIONS ========== */
+.card-custom {
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
+}
+
+.section-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== IKONER ========== */
+.tech-icon {
+    font-size: 3rem;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.tech-icon:hover {
+    transform: scale(1.3);
+    filter: brightness(1.2);
+}
+
+.icon-rotate:hover {
+    transform: rotate(20deg);
+    transition: transform 0.3s ease;
+}
+
+/* ========== GRADIENTBLOCK ========== */
+.custom-gradient {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* ========== BAKGRUNDSANIMATION ========== */
+.background-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: moveBackground 10s linear infinite;
+    z-index: 0;
+    border-radius: 1rem;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 40px 40px;
+    }
+}
+
+
+a {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* overlay som täcker bilden */
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+}
+
+.card-custom .card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* se till att .btn-custom finns definierad enligt tidigare */
+.btn-custom {
+    background-color: #9333ea;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #f59e0b;
+    color: #111827;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+}
+
+
+.tech-icon {
+    font-size: 3rem;
+    animation: pulseRotate 4s infinite ease-in-out;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+@keyframes pulseRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .btn-custom {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .tech-icon {
+        font-size: 2.2rem;
+    }
+
+    .custom-gradient {
+        padding: 1.5rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .section-fade {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .card-custom {
+        padding: 1rem;
+    }
+}
