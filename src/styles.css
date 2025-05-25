@@ -38,33 +38,34 @@ h3:hover::after {
 
 /* ========== KNAPPAR ========== */
 .btn-custom {
-    background-color: #6610f2;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
+    background-color: #9333ea;
+    color: white;
+    padding: 0.5rem 1rem;
     border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(102, 16, 242, 0.4);
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
     transition: all 0.3s ease;
+    border: none;
 }
 
 .btn-custom:hover {
-    background-color: #5a0dcf;
-    color: #ffffff;
+    background-color: #f59e0b;
+    color: #111827;
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(102, 16, 242, 0.5);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
 }
 
 .btn-custom:active {
     transform: translateY(0) scale(0.95);
 }
 
-/* ========== KORT & SECTIONS ========== */
+/* ========== KORT & PROJEKT ========== */
 .card-custom {
     background-color: #2d2d2d;
-    border-radius: 12px;
+    border-radius: 1rem;
     padding: 20px;
+    border: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -73,6 +74,61 @@ h3:hover::after {
     box-shadow: 0 8px 25px rgba(147, 51, 234, 0.4);
 }
 
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (hover: none) {
+    .card-overlay {
+        opacity: 1 !important;
+    }
+}
+
+.card-custom .card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+/* ========== IKONER ========== */
+.tech-icon {
+    font-size: 3rem;
+    animation: pulseRotate 4s infinite ease-in-out;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.tech-icon:hover {
+    transform: scale(1.3);
+    filter: brightness(1.2);
+}
+
+@keyframes pulseRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.2) rotate(15deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* ========== ANIMATIONER ========== */
 .section-fade {
     opacity: 0;
     transform: translateY(20px);
@@ -86,22 +142,6 @@ h3:hover::after {
     }
 }
 
-/* ========== IKONER ========== */
-.tech-icon {
-    font-size: 3rem;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-.tech-icon:hover {
-    transform: scale(1.3);
-    filter: brightness(1.2);
-}
-
-.icon-rotate:hover {
-    transform: rotate(20deg);
-    transition: transform 0.3s ease;
-}
-
 /* ========== GRADIENTBLOCK ========== */
 .custom-gradient {
     background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
@@ -112,7 +152,6 @@ h3:hover::after {
     z-index: 1;
 }
 
-/* ========== BAKGRUNDSANIMATION ========== */
 .background-animation {
     position: absolute;
     top: 0;
@@ -136,7 +175,7 @@ h3:hover::after {
     }
 }
 
-
+/* ========== LÄNKAR ========== */
 a {
     transition: all 0.3s ease;
 }
@@ -145,70 +184,7 @@ a:hover {
     text-decoration: none;
 }
 
-.card-custom {
-    border: none;
-    border-radius: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-custom:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* overlay som täcker bilden */
-.card-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-}
-
-.card-custom .card-img-top {
-    object-fit: cover;
-    height: 200px;
-}
-
-/* se till att .btn-custom finns definierad enligt tidigare */
-.btn-custom {
-    background-color: #9333ea;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-custom:hover {
-    background-color: #f59e0b;
-    color: #111827;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
-}
-
-
-.tech-icon {
-    font-size: 3rem;
-    animation: pulseRotate 4s infinite ease-in-out;
-    transition: transform 0.3s, filter 0.3s;
-}
-
-@keyframes pulseRotate {
-    0% {
-        transform: scale(1) rotate(0deg);
-    }
-
-    50% {
-        transform: scale(1.2) rotate(15deg);
-    }
-
-    100% {
-        transform: scale(1) rotate(0deg);
-    }
-}
-
-
+/* ========== RESPONSIVT ========== */
 @media (max-width: 576px) {
     .btn-custom {
         font-size: 1rem;
@@ -223,7 +199,6 @@ a:hover {
         padding: 1.5rem;
     }
 }
-
 
 @media (max-width: 768px) {
     .section-fade {

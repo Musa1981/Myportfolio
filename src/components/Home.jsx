@@ -1,4 +1,4 @@
-// src/components/Home.jsx
+// src/components/Home.jsx 
 import { useNavigate } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import { motion } from "framer-motion";
@@ -26,8 +26,13 @@ function Home() {
                 animate={{ scale: 1 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
                 whileHover={{
-                    scale: 1.1,
-                    rotate: 360
+                    y: [0, -10, 0],
+                    transition: {
+                        duration: 1.5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        ease: "easeInOut"
+                    }
                 }}
                 whileTap={{ scale: 0.9 }}
             />
@@ -62,16 +67,16 @@ function Home() {
                 </motion.p>
 
                 <motion.button
-                    className="btn btn-primary d-flex align-items-center"
                     onClick={() => navigate("/projects")}
+                    className="btn btn-lg px-4 py-2 fw-semibold rounded-pill bg-primary text-white border-0 d-flex align-items-center gap-2 mt-3"
                     variants={{
                         hidden: { y: 20, opacity: 0 },
                         show: { y: 0, opacity: 1 }
                     }}
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(0,0,0,0.3)" }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(0,123,255,0.6)" }}
+                    transition={{ type: "spring", stiffness: 250 }}
                 >
-                    Se mina projekt <FiArrowRight className="ms-2" />
+                    Utforska mina projekt <FiArrowRight />
                 </motion.button>
             </motion.div>
         </section>

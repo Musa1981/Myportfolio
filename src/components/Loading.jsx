@@ -20,8 +20,8 @@ function Loading() {
                 {icons.map((icon, index) => (
                     <div key={index} className="col-4 col-sm-3 text-center">
                         <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
+                            animate={{ scale: [1, 1.2, 1] }}
+                            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                             style={{
                                 fontSize: "3rem",
                                 padding: "1rem",
@@ -32,6 +32,7 @@ function Loading() {
                         >
                             {icon.component}
                         </motion.div>
+
                         <div className="mt-2 small">{icon.name}</div>
                     </div>
                 ))}
@@ -41,7 +42,7 @@ function Loading() {
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             >
-                Laddar din portfolio...
+                Laddar portfolio...
             </motion.p>
         </div>
     );
