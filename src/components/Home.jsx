@@ -66,9 +66,10 @@ function Home() {
                     Frontend Developer med passion för React och Angular
                 </motion.p>
 
-                <motion.button
-                    onClick={() => navigate("/projects")}
-                    className="btn btn-lg px-4 py-2 fw-semibold rounded-pill bg-primary text-white border-0 d-flex align-items-center gap-2 mt-3"
+                <motion.a
+                    href="/CV MUSA.pdf"
+                    download
+                    className="btn px-3 py-2 fw-semibold rounded-pill bg-primary text-white border-0 mt-3 text-decoration-none"
                     variants={{
                         hidden: { y: 20, opacity: 0 },
                         show: { y: 0, opacity: 1 }
@@ -76,8 +77,10 @@ function Home() {
                     whileHover={{ scale: 1.1, boxShadow: "0 0 20px rgba(0,123,255,0.6)" }}
                     transition={{ type: "spring", stiffness: 250 }}
                 >
-                    Utforska mina projekt <FiArrowRight />
-                </motion.button>
+                    Ladda ner mitt CV
+                </motion.a>
+
+
             </motion.div>
         </section>
     );
