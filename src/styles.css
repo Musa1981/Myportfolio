@@ -105,7 +105,7 @@ h3:hover::after {
 /* ========== IKONER ========== */
 .tech-icon {
     font-size: 3rem;
-    animation: pulseRotate 4s infinite ease-in-out;
+    animation: pulseOnly 4s infinite ease-in-out;
     transition: transform 0.3s, filter 0.3s;
 }
 

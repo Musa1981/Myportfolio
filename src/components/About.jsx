@@ -58,12 +58,11 @@ function About() {
                         key={index}
                         className="text-center"
                         animate={{
-                            rotate: [0, 10, -10, 0],
-                            scale: [1, 1.2, 1],
+                            scale: [1, 1.12, 1],
                         }}
                         transition={{
                             repeat: Infinity,
-                            duration: 2,
+                            duration: 2.2,
                             ease: "easeInOut",
                             delay: index * 0.1,
                         }}
